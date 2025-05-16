@@ -30,6 +30,6 @@ target "build" {
     load = true
     output = [
         "type=image,name=${tag}",
-        "type=docker,name=${tag}"
+        # "type=docker,name=${tag}"
     ]
 }
