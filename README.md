@@ -1,3 +1,10 @@
+> [!NOTE]
+> Please use the following commands to push a new image to CrossnoKaye's ECR repository:
+
+```bash
+IMAGE_TAG=v<version> docker buildx bake --push
+```
+
 # Kube-secret-syncer
 
 Kube-secret-syncer is a [Kubernetes operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) developed
@@ -16,7 +23,7 @@ Kube-secret-syncer is similar to other projects such as:
  * [Kubernetes external secrets](https://github.com/godaddy/kubernetes-external-secrets)
  * [AWS secret operator](https://github.com/mumoshu/aws-secret-operator)
 
-Kube-secret-syncer improves on this approach: 
+Kube-secret-syncer improves on this approach:
  * uses [caching](#caching) to only retrieve the value of secrets when they have changed, substantially reducing
  [costs](https://aws.amazon.com/secrets-manager/pricing/) when syncing a large number of secrets.
  * enables sophisticated access control to secrets in AWS SecretsManager using IAM roles - see our
